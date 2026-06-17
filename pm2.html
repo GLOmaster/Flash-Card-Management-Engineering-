@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Anki PDF Exporter: PM 2 - Grantt Chart & Network Techniques (8 cards)</title>
+    <style>
+        body {
+            font-size: 9pt;
+            font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+        }
+        .cards-container {
+            column-count: 1;
+        }
+        .card > table {
+            width: 100%;
+        }
+        .card > table > tr > td {
+            vertical-align: top
+        }
+        td.question, td.answer {
+            word-break: break-all;
+            word-break: break-word;
+            hyphens: auto;
+        }
+        td.index {
+            font-size: 9pt;
+            width: 5%;
+            color: #888888;
+        }
+        td.question {
+            width: 18%;
+            font-weight: normal;
+        }
+        td.spacer {
+            width: 3%;
+        }
+        td.answer {
+            width: 100%;
+        }
+        .card {
+            page-break-inside: avoid;
+            page-break-after: auto;
+        }
+        img {
+            max-width: 35%;
+            max-height: 35vh;
+        }
+        hr {
+            color: #DADADA;
+            border-width: 1px;
+            height: 0px;
+            border-style: solid;
+        }
+        
+/* Cloze deletions */
+.cloze {
+  font-weight: bold;
+  color: blue;
+}
+
+/* Image occlusions */
+#io-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+#io-overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 3
+}
+
+#io-original {
+  position: relative;
+  top: 0;
+  width: 100%;
+  z-index: 2
+}
+
+#io-revl-btn {
+  display: none;
+}
+    </style>
+    <base href="file:///C:/Users/UTENTE/AppData/Roaming/Anki2/Utente%201/collection.media/">
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    function unfixAll() {
+      for (const el of document.getElementsByTagName("*")){
+          var style = window.getComputedStyle(el);
+          if (style.position === "fixed") {
+            if (style.display === "none" || style.visibility === "hidden") return;
+            el.remove();
+          }
+      }
+    }
+    function removeInlineImgStyles(){
+        for(let elm of document.getElementsByTagName("img")){
+            elm.style.width = null;
+            elm.style.height = null;
+      }
+    }
+
+    window.addEventListener("load", unfixAll);
+    window.addEventListener("load", removeInlineImgStyles);
+    </script>
+</head>
+    
+<body>
+<div class="cards-container">
+    
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="index" style="">1.1</td>
+                    <td class="question">Cos'è e quali sono le limitazioni del<b> Grantt Chart?</b></td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="answer">Tool di visulizzazione manageriale che illustra la schedulazione del progetto nel tempo. La sua struttura è:<br/><ul><li>Asse x: Tempo.</li><li>Asse y: Attività.</li></ul><div>Presenta alcune limitazioni evidenti, in quanto non riesce a gestire alcune variabili come:</div><div><ul><li>Relazione logica tra le attività: non mostra quali attività "bloccano" le seguenti (attività critiche).</li><li>Risorse limitate: non considerando l'effettiva disponibilità di risorse e macchine.</li><li>Casualità dei tempi di esecuzione.</li><li>Costo totale.</li></ul></div></td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="index" style="">2.1</td>
+                    <td class="question">Cosa sono le <b>Network Techniques?</b></td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="answer">Tecniche per la <b>pianificazione, programmazione e controllo </b>dello <b>stato di avanzamento di un progetto</b>. Comportano sempre due fasi distinte:<br/><ol><li><u>Identificazione della rete logica:</u> Il progetto viene <b>decomposto </b>nelle sue attività elementari e si stabilisce la <b>relazione logica </b>tra le attività (predecessori, successori e attività parallele) e la loro <b>durata</b>.<br/></li><li><u>Esecuzione della pianificazione (con algoritmi):</u> Usando algoritmi matematici si possono determinare data di inizio e di fine delle attività.<br/></li></ol></td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="index" style="">3.1</td>
+                    <td class="question">Classificazioni dei modelli</td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="answer">Una prima classificazione è:<br/><ul><li><u><b>Modello Deterministico:</b></u> CPM - Critical Path Method.<br/></li><li><u><b>Modello Stocastico:</b></u> PERT - Program Evaluation and Review Techniques.<br/></li></ul><div>Seconda classificazione è in base agli <b>obiettivi:</b></div><div><ul><li><u><b>Pianificazione delle scadenze.<br/></b></u></li><li><u><b>Pianificazione dei costi.</b></u></li><li><u><b>Minimizzazione dei costi.</b></u></li><li><u><b>Ottimizzazione delle risorse.</b></u></li></ul></div></td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="index" style="">4.1</td>
+                    <td class="question">Quali sono le regole di rappresentazione?</td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="answer">Sono essenzialmente due:<br/><ol><li><u><b>AON - Activity On Node:</b></u> E' la rappresentazione europea dove ogni attività è rappresentata da un nodo, e ogni freccia rappresenta le relazioni logiche intercorrenti tra le attività.</li><li><u><b>AOA - Activity On Arrow:</b></u> E' la rappresentazione americana dove ogni attività è rappresentata da una freccia, e ogni evento è rappresentato da un nodo.<br/></li></ol></td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="index" style="">5.1</td>
+                    <td class="question">Parlami del CPM (Critical Path Method)</td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="answer">Il CPM è una <b>tecnica di Project Management </b>(un grafo orientato) usata per la <b>pianificazione di progetti complessi</b>.<br/>Consiste nell'<b>identificare la sequenza più lunga di attività interdipendenti e le loro dipendenze</b>, determinano così il tempo minimo necessario per completare l'intero progetto.<br/>Nel CPM per ogni attività vengono riportate <b>Duration </b>e <b>Relazioni Logiche</b>.<br/>La sua <b>struttura </b>può essere <b>americana o europea </b>(quella che usiamo noi) ma esso non tiene conto della casualità della durata delle attività, quindi le variabili controllabili sono:<br/><ul><li>Durata del progetto.</li><li>Costo totale.</li><li>Andamento totale.</li><li>Assegnazione delle risorse.</li></ul><div>Le metodologie (ASAP, ALAP etc) si collegano al CPM con la relazione <i>contenitore-contenuto </i>in quanto le prime definiscono le <b>fasi strategiche del progetto,</b> queste metodologie sono:</div><div><ul><li><u><b>ASAP - As Soon As Possible</b></u>: Il passaggio in avanti di ogni attività è calcolato come: \( EF(i)=ES(i)+d(i) \).<br/></li><li><u><b>ALAP - As Late As Possible:</b></u> Il backward pass di ogni attività viene calcolato come: \( LF(i)=LS(i)+d(i) \).<br/></li></ul><div>La <b>deadline del progetto</b> è data dalla <b>data di completamento anticipato dell'ultima attività</b> e il <b>Critical Path </b>è dato dall'insieme di attività che verificano questa condizione: \( ES(i)=LS(i), EF(i)=LF(i) \)</div></div></td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="index" style="">6.1</td>
+                    <td class="question">Cosa sono il Total Float, Free Float, Independent Float, Leg &amp; Lead?</td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="answer"><ul><li><u><b>Total Float (TF):</b></u> E' il numero massimo di unità di tempo per cui l'attività (j) può essere ritardata senza ritardare l'intero progetto. \( TF(j)=LF(j)-EF(j)=LS(j)-ES(j) \). E' applicabile a tutte quelle attività i cui predecessori (k) hanno un float inferiori o uguale a: ES(i)-EF(k).</li></ul><ul><li><u><b>Free Float (FF):</b></u> Tempo massimo cui può essere ritardata un'attività senza influire sulla successiva. \( EF(i)=min{ES(k)} - EF(i) \). Per tutti i successori di k veniva applicato un margine di fluttuazione di: \( LS(k)-LF(i) \).<br/></li><li><u><b>Indipendent Float (IF):</b></u> Intervallo di tempo in cui un'attività (i) può essere ritardata se i suoi predecessori (j) sono finiti al LF e consente comunque al suo successore (k) di iniziare all'ES. \( min{ES(k)} - max{LF(j)} - d(i) \).<br/></li><li><u><b>Lag &amp; Lead:</b></u> Rappresentano rispettivamente la relazione logica di ritardo nell'attività successore: \( ES(B)=EF(A)+Lag \). E la relazione logica di avanzamento precoce del successore: \( ES(B)=EF(A)-Lead \).<br/></li></ul></td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="index" style="">7.1</td>
+                    <td class="question">Cos'è il PDM - Precedence Diagram Mathod?</td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="answer">Tecnica utilizzata per creare una rete di pianificazione di progetto che utilizzi riquadri e rettangoli per le attività (nodi) e frecce per rappresentare le relazioni logiche tra loro. Le relazioni logiche utilizzate possono essere:<br/><ul><li><u><b>Finish-Start (FS):</b></u> Una attività successore non può iniziare finché l'attività predecessore non è finita.<br/></li><li><u><b>Finish-Finish (FF): </b></u>Una attività successore non può finire finché l'attività predecessore non è finita.<br/></li><li><u><b>Start-Start (SS):</b></u> Una attività successore non può iniziare finché non l'attività predecessore non è iniziata.</li><li><u><b>Start-Finish (SF):</b></u> Una attività successore non può finire finché l'attività predecessore non è iniziata.<br/></li></ul><div>Ma esistono anche dei vincoli, nello specifico sono otto:</div><div><ol><li><u><b>ASAP - As Soon As Possible.</b></u><br/></li><li><u><b>ALAP - As Late As Possible.</b></u></li><li><u><b>SNET - Start No Earlier Than.</b></u></li><li><u><b>FNET - Finish No Earlier Than.</b></u></li><li><u><b>SNLT - Start No Later Than.</b></u></li><li><u><b>FNLT - Finish No Later Than.</b></u></li><li><u><b>MSO - Must Start On.</b></u></li><li><u><b>MFO - Must Finish On.</b></u></li></ol></div></td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="index" style="">8.1</td>
+                    <td class="question">Parlami del PERT</td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="answer">La tecnica PERT è un grafo orientato in cui vengono riportate le informazioni relative alla duration delle operazioni e alle loro relazioni logiche. La sua struttura può essere americana o europea e <b>tiene conto delle relazioni logiche tra attività e della variabilità nella durata delle stesse.</b> <br/>Le variabili controllabili qui sono:<br/><ul><li>Project Duration.</li><li>Costo totale e total trend.</li><li>Assegnazione delle risorse.</li></ul><div>Si basa su una distribuzione beta associata al tempo di esecuzione delle attività, si distinguono tre diverse durate:</div><div><ol><li><u>Stima ottimistica (a):</u> Best case scenario dove si considerano tutte le condizioni favorevoli e il minor tempo possibile per portare a termine l'attività.<br/></li><li><u>More Likely (b):</u> Scenario in cui tutto procede normalmente e dove l'attività viene completata normalmente.</li><li><u>Stima pessimistica (c):</u> Scenario peggiore, stima calcolata tenendo conto delle condizioni sfavorevoli e con tempo di completamento lunghi.</li></ol><div>Deve avere alcune proprietà:</div></div><div><ol><li>Distribuzione unimodale: unico picco massimo per la duration più probabile.</li><li>Bassa probabilità per i casi limite (a, c).</li><li>Forma asimmetrica.</li></ol></div></td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    
+    <hr>
+</div>
+</body>
+</html>
