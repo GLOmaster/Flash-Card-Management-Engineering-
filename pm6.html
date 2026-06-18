@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Anki PDF Exporter: PM 6 - Work Breakdown Structure (WBS) (9 cards)</title>
+    <style>
+        body {
+            font-size: 9pt;
+            font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+        }
+        .cards-container {
+            column-count: 1;
+        }
+        .card > table {
+            width: 100%;
+        }
+        .card > table > tr > td {
+            vertical-align: top
+        }
+        td.question, td.answer {
+            word-break: break-all;
+            word-break: break-word;
+            hyphens: auto;
+        }
+        td.index {
+            font-size: 9pt;
+            width: 5%;
+            color: #888888;
+        }
+        td.question {
+            width: 18%;
+            font-weight: normal;
+        }
+        td.spacer {
+            width: 3%;
+        }
+        td.answer {
+            width: 100%;
+        }
+        .card {
+            page-break-inside: avoid;
+            page-break-after: auto;
+        }
+        img {
+            max-width: 35%;
+            max-height: 35vh;
+        }
+        hr {
+            color: #DADADA;
+            border-width: 1px;
+            height: 0px;
+            border-style: solid;
+        }
+        
+/* Cloze deletions */
+.cloze {
+  font-weight: bold;
+  color: blue;
+}
+
+/* Image occlusions */
+#io-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+#io-overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 3
+}
+
+#io-original {
+  position: relative;
+  top: 0;
+  width: 100%;
+  z-index: 2
+}
+
+#io-revl-btn {
+  display: none;
+}
+    </style>
+    <base href="file:///C:/Users/UTENTE/AppData/Roaming/Anki2/Utente%201/collection.media/">
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    function unfixAll() {
+      for (const el of document.getElementsByTagName("*")){
+          var style = window.getComputedStyle(el);
+          if (style.position === "fixed") {
+            if (style.display === "none" || style.visibility === "hidden") return;
+            el.remove();
+          }
+      }
+    }
+    function removeInlineImgStyles(){
+        for(let elm of document.getElementsByTagName("img")){
+            elm.style.width = null;
+            elm.style.height = null;
+      }
+    }
+
+    window.addEventListener("load", unfixAll);
+    window.addEventListener("load", removeInlineImgStyles);
+    </script>
+</head>
+    
+<body>
+<div class="cards-container">
+    
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="index" style="">1.1</td>
+                    <td class="question">Cos'è una WBS? A cosa serve? Come si crea?</td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="answer">Possiamo cominciare con lo scomporre il termine <b>Work Breakdown Structure:</b><br/><ul><li><b>Work:</b> Il lavoro fisico o mentale necessario.</li><li><b>Breakdown:</b> Ripartizione in parti più piccole.<br/></li><li><b>Structure:</b> Modello basato su relazioni logico-gerarchiche.<br/></li></ul><div>Si definisce come: <i><b>Scomposizione gerarchica dell'intero scope del lavoro che il team deve svolgere per raggiungere i deliverables.</b></i> </div><div>Scendendo di livello si ha un dettaglio maggiore del lavoro necessario. Essa <b>è diretta:</b><br/><ul><li>Esternamente dal cliente e dagli stakeholder.<br/></li><li>Internamente dal PM.</li></ul><div>La WBS evidenzia tutto ciò che deve essere consegnato al cliente (le attività che devono essere eseguite nelle varie fasi), ed è quindi una <b>rappresentazione integrata</b> di ciò che deve essere fatto e di come deve essere fatto e aiuta gli stakeholder ad avere una chiara visione degli obiettivi di progetto.</div></div><div>Riassumiamo adesso a cosa serve la WBS</div><div><ul><li>Aiuta a comprendere il progetto.</li><li>Aiuta a gestire il progetto.</li><li>Aiuta a comprendere le relazioni tra attività.</li><li>E' input di altri processi di pianificazione.</li><li>Permette la gestione del controllo di avanzamento.</li><li>Strumento di comunicazione con gli stakeholder.</li><li>Documento organizzativo che aiuta a identificare i responsabili delle attività di progetto.</li></ul><div>Il <b>processo di creazione di una WBS è:</b></div></div><div><ol><li>Identificazione degli elementi principali del progetto.</li><li>Decidere il livello di dettaglio appropriato.</li><li>Per ogni elemento, se non esiste un livello di dettaglio appropriato, dividerlo in elementi di livello inferiore (ripetere il passaggio 2 per tutti gli elementi).</li><li>Identificare gli elementi che costituiscono un risultato tangibile e descriverli.</li></ol></div></td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="index" style="">2.1</td>
+                    <td class="question">Su quali processi si basa il Project Management?</td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="answer"><ol><li>Inizializzazione: Fase di avvio e autorizzazione.</li><li>Pianificazione: Definizione della WBS, identificazione delle attività e sviluppo di un programma.</li><li>Esecuzione: Coordinamento delle risorse al fine di completare il progetto, vengono fornite relazioni e informazioni sul progetto.</li><li>Controllo: Si monitora l'effettiva prestazione rispetto a quanto pianificato, così da poter attuare misure correttive e riprogrammare le attività per garantire il raggiungimento degli obiettivi.</li><li>Chiusura: Accettazione dei risultati.</li></ol></td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="index" style="">3.1</td>
+                    <td class="question">Quanto lavoro deve contenere un WP?</td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="answer">Dei WP piccoli presentano dei vantaggi:<br/><ul><li>Maggiore monitoraggio e controllo.</li><li>Maggiori flussi di cassa.</li><li>Necessità di una stima più precisa di costi e tempi.</li></ul><div>Dei WP più grandi (quindi meno, numericamente) presentano i seguenti svantaggi:</div><div><ul><li>Stime di tempi e costi più difficoltose.</li><li>Carico di lavoro dei WP.</li></ul><div>Fattori che sono vincoli per i WP:</div></div><div><ul><li>Assegnazione delle responsabilità.</li><li>Coesione interna.</li><li>Rischio.</li></ul></div></td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="index" style="">4.1</td>
+                    <td class="question">Quali sono le tipologie di WBS?</td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="answer"><ol><li><u><b>Orientato al prodotto:</b></u> La struttura del prodotto si suddivide in sottoprodotti, il focus è sui servizi del progetto o sui risultati.<br/></li><li><u><b>Orientato alle fasi:</b></u> Si segue il ciclo di vita del prodotto.<br/></li><li><u><b>Orientato alla funzione o all'organizzazione</b></u>: Divisione per dipartimenti aziendali.</li><li><u><b>Orientato al lavoro:</b></u> Divisa per tipologia di lavori da eseguire.<br/></li><li><u><b>Orientata agli obiettivi:</b></u> Orientamento al raggiungimento degli obiettivi fissati.<br/></li><li><u><b>Orientamento alla posizione:</b></u> Per progetti geograficamente dislocati, qui il II livello si riferisce alla località geograficain cui viene implementato, il III livello invece secondo uno degli approcci descritti.<br/></li></ol></td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="index" style="">5.1</td>
+                    <td class="question">Cos'è l' Organization Breakdown Structure (OBS)?</td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="answer">E' una <b>struttura orientata funzionalmente che descrive le relazioni tra componenti organizzativi coinvolti nel progetto</b> e lo scopo è quello di <b>assegnare risorse e responsabilità una volta definita la WBS.</b><br/>Quindi si occupa di definire le unità organizzative responsabili dello svolgimento del lavoro.</td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="index" style="">6.1</td>
+                    <td class="question">Cosa è la Responsability Assignment Matrix (RAM)? E che legame c'è con la Raci Matrix e cos'è?</td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="answer">Collega OBS e WBS, quindi cosa deve essere fatto con chi lo deve fare. In progetti di grandi dimensioni si possono avere:<br/><ul><li>RAM di alto livello (unità organizzative).</li><li>RAM di basso livello (singoli individui).</li></ul><div>La <b>RACI Matrix </b>invece è un tipo particolare di RAM e specifica per ogni attività quattro ruoli chiave:</div><div><ul><li><b>R - Responsible: </b>Chi esegue l'attività.<br/></li><li><b>A - Accountable:</b> Chi ha la responsabilità finale del risultato.<br/></li><li><b>C - Consulted: </b>Chi fornisce supporto o pareri.<br/></li><li><b>I - Informed:</b> Chi deve essere aggiornato sull'avanzamento o completamento dell'attività.<br/></li></ul></div></td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="index" style="">7.1</td>
+                    <td class="question">Cos'è il RBS?</td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="answer">Il <b>Resource Breakdown Structure </b>è una rappresentazione gerarchica delle risorse classificata per<br/><ul><li>Categoria (manodopera, materiali, attrezzature).</li><li>Tipo (grado o livelli di competenze).</li></ul><div>Si usa quando il livello è affidato a singoli individui e serve per facilitare la pianificazione e il controllo dei costi.</div></td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="index" style="">8.1</td>
+                    <td class="question">Cos'è la RiBS?</td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="answer">La <b>Risk Breakdown Structure </b>è la struttura gerarchica delle risorse che organizza i potenziali rischi del progetto in base alle loro categorie (rischi tecnici, gestionali, esterni). Aiuta il team a identificare tutte le possibili minacce.</td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="index" style="">9.1</td>
+                    <td class="question">Quali sono gli approcci per realizzare una WBS?</td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="answer"><ul><li><u><b>Top Down:</b></u> L'analisi parte dal livello più alto (Livello I) quindi dall'obiettivo generale e arriva fino al livello di dettaglio che permette una stima adeguata del tempo necessario per realizzare il progetto, il suo costo e le risorse necessarie. Il project team viene definito al livello II e può avvenire secondo due modalità<br/></li><ul><li>Per la prima attività di livello II si nomina un <i>facilitatore</i> che guida l'intero Project Team nella scomposizone dell'attività e si ripete la stessa procedura per la seconda attività e così via.</li><li>Il project team viene suddiviso in sotto-team quante sono le attività di livello II della WBS. Ciascuna attività viene analizzata dall'esperto.</li></ul><li><u><b>Bottom-up:</b></u> Il project team viene definito al livello II della WBS e poi suddiviso in sotto-team quante sono le attività di livello II e ad ogni sotto-team viene chiesto di sviluppare la WBS di un'attività del livello II. Questo avviene tramite una procedura di brain storming dove il facilitatore chiede ai membri quali sono le attività elementari necessarie. Se non viene aggiunta nessuna allora queste vengono ordinate in gruppi di attività che hanno un grado di somiglianza tra loro definendo i livelli del WBS.<br/></li></ul></td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    
+    <hr>
+</div>
+</body>
+</html>
