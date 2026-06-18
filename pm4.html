@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Anki PDF Exporter: PM 4 - Project Progress (Earned Value) (15 cards)</title>
+    <style>
+        body {
+            font-size: 9pt;
+            font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+        }
+        .cards-container {
+            column-count: 1;
+        }
+        .card > table {
+            width: 100%;
+        }
+        .card > table > tr > td {
+            vertical-align: top
+        }
+        td.question, td.answer {
+            word-break: break-all;
+            word-break: break-word;
+            hyphens: auto;
+        }
+        td.index {
+            font-size: 9pt;
+            width: 5%;
+            color: #888888;
+        }
+        td.question {
+            width: 18%;
+            font-weight: normal;
+        }
+        td.spacer {
+            width: 3%;
+        }
+        td.answer {
+            width: 100%;
+        }
+        .card {
+            page-break-inside: avoid;
+            page-break-after: auto;
+        }
+        img {
+            max-width: 35%;
+            max-height: 35vh;
+        }
+        hr {
+            color: #DADADA;
+            border-width: 1px;
+            height: 0px;
+            border-style: solid;
+        }
+        
+/* Cloze deletions */
+.cloze {
+  font-weight: bold;
+  color: blue;
+}
+
+/* Image occlusions */
+#io-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+#io-overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 3
+}
+
+#io-original {
+  position: relative;
+  top: 0;
+  width: 100%;
+  z-index: 2
+}
+
+#io-revl-btn {
+  display: none;
+}
+    </style>
+    <base href="file:///C:/Users/UTENTE/AppData/Roaming/Anki2/Utente%201/collection.media/">
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    function unfixAll() {
+      for (const el of document.getElementsByTagName("*")){
+          var style = window.getComputedStyle(el);
+          if (style.position === "fixed") {
+            if (style.display === "none" || style.visibility === "hidden") return;
+            el.remove();
+          }
+      }
+    }
+    function removeInlineImgStyles(){
+        for(let elm of document.getElementsByTagName("img")){
+            elm.style.width = null;
+            elm.style.height = null;
+      }
+    }
+
+    window.addEventListener("load", unfixAll);
+    window.addEventListener("load", removeInlineImgStyles);
+    </script>
+</head>
+    
+<body>
+<div class="cards-container">
+    
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="index" style="">1.1</td>
+                    <td class="question">Definizione di progetto e cosa bisogna monitorare?</td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="answer">Una ulteriore definizione di progetto è: <i>Insieme di attività vagamente correlate che <b>costano di più </b>e la cui </i><b><i>durata è più lunga del previsto</i></b>.<br/>Per questo motivo bisogna monitorare due variabili:<br/><ul><li><b>Andamento dei costi.</b><br/></li><li><b>Avanzamento del progetto.</b></li></ul><div>Lo scopo è quello di attuare azioni che riducano durata e costi.<br/></div></td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="index" style="">2.1</td>
+                    <td class="question">Quali sono le tipologie di progresso?</td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="answer"><ul><li><b>Progresso Contabile:</b> Il <b>focus </b>è sui <b>costi sostenuti</b>, sui <b>costi da sostenere</b>, sulla <b>tempistica delle uscite </b>e sulla <b>redditività attesa.</b><br/></li><li><b>Progresso Tecnico: </b>Il <b>focus </b>è sulla <b>quantità di lavoro effettuato, le risorse utilizzate, il lavoro residuo e la data stimata di completamento.</b></li></ul></td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="index" style="">3.1</td>
+                    <td class="question">Cos'è la sindrome del 90%?</td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="answer">Problema comune di controllo tecnico dove un responsabile sostitene di aver quasi completato il lavoro (al 90%) ma continua a dare la stessa risposta per settimane.<br/>Per <b>eliminare questo errore </b>bisogna <b>minimizzare i margini di soggettività </b>quando si fanno le valutazioni e favorire l'<b>utilizzo di parametri oggettivi.</b></td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="index" style="">4.1</td>
+                    <td class="question">Cos'è l'Analsi dell'Earned Value e come si fa? Qual è la sua utilità?</td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="answer">Analisi che "fotografa" il progetto in un particolare istante temporale, che chiamiamo \(T_{now} \) e serve per <b>eliminare la soggettività.</b><br/>Essa si basa su un <i>analisi tridimensionale:</i><br/><ol><li><i><b><u>Planned Value</u></b> (PV):</i> Detto <b>Budget Cost of Work Scheduled (BCWS), </b>rappresenta il valore di lavoro che era stato progrmmato di completare entro il  \( T_{now} \) in termini di budget.<br/></li><li><i><b><u>Earned Value</u></b> (EV)</i>: Detto <b>Budget Cost of Work Performed (BCWP)</b>, rappresenta il valore di lavoro effettivamente svolto al \( T_{now} \) in termini di budget.<br/></li><li><i><b><u>Actual Cost</u></b> (AC): </i>Detto <b>Actual Cost of Work Performed (ACWP), </b>rappresenta il costo reale sostenuto per il lavoro svolto fino al \( T_{now} \) in termini di budget.<br/></li></ol><div>La sua <b>utilità</b> è molteplice:</div><div><ul><li><b>Stabilità negli indici:</b> Una volta raggiunto il 15-20% gli indici diventano stabili.<br/></li><li><b>Segnale di allarme precoce:</b> Ricevere segnali di allarme presto (20%) permette di intervenire con tempestività e attuare azioni correttive.<br/></li><li><b>Prevedibilità scientifica:</b> I dati vengono usati per prevedere scientificamente i risultati futuri.<br/></li><li><b>Difficoltà nel recupero degli scostamenti:</b> Con l'avanzare del progetto un superamento tende a diventare più difficile da recuperare.<br/></li><li><b>Supervisione accurata: </b>Dati coerenti, accurati e tempestivi.<br/></li></ul></div></td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="index" style="">5.1</td>
+                    <td class="question">Come facciamo a capire se un progetto è in salute?</td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="answer"><ul><li><b><u>Valutando performance della schedulazione</u> </b>(tempi): Confrontando EV con PV, e otteniamo due metriche distinte: \( SV=EP-PV \) ovvero lo <b>Scheduled Variance</b> e se questo indice è negativo allora siamo in ritardo. Otteniamo anche \( SPI= \frac{EV}{PV} \) ovvero lo <b>Scheduled Performance Index </b>che se minore di uno indica che siamo in ritardo.<br/></li><li><b><u>Valutando la performance dei costi</u></b>: Confrontando EV con AC. Otteniamo così due metriche: CV=EV-AC ovvero la <b>Cost Variance </b>e se questa è negativa allora stiamo spendendo troppo, oppure \( CPI=\frac{EV}{AC}\) il <b>Cost Performance Index </b>che se minore di uno allora il progetto è in perdita di efficienza economica.<br/></li></ul></td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="index" style="">6.1</td>
+                    <td class="question">Quali sono i criteri dell' EVM?</td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="answer"><ol><li><b>Organizzazione </b><br/></li><ol><li>Definizione degli elementi di lavoro utilizzati.</li><li>Definizione degll'intero ambito di processo.</li><li>Integrazione dei processi di pianificazione, programmazione, bilancio, autorizzazione e accumulo dei costi dell'azienda.</li><li>Stabilire la responsabilità del controllo di gestione (CAP).</li></ol><li><b>Pianificazione, progettazione e bilancio</b></li><ol><li>Sistema formale di pianificazione, progettazione e bilancio.<br/></li><li>Linea di base del progetto per misurare le prestazioni.</li><li>Identificare gli indicatori di misurazione del progresso.</li></ol><li><b>Contabilità</b><br/></li><ol><li>Relazioni accurate su costi e tempestive.</li><li>Registrazione dei costi come consumati/sostenuti.</li><li>Sistemi contabili in grado di calcolare EV, PV, AC.</li></ol><li><b>Analisi</b><br/></li><ol><li>Misurazione delle prestazioni effettive.</li><li>Analisi delle performance effettive.</li><li>Previsioni dei risultati finali.</li></ol><li><b>Revisioni</b></li><ol><li>Gestione delle modifiche della baseline del progetto.</li><li>Tempestiva approvazione/rigetto o incorporazione dei cambiamenti approvati.</li></ol></ol></td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="index" style="">7.1</td>
+                    <td class="question">Quali sono i passaggi di applicazione dell'EVM?</td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="answer"><ol><li><u><b>Definizione dell'intero ambito di progetto:</b></u> Capire il progetto e definire l'ambito di lavoro (usando una WBS).<br/></li><li><u><b>Chi eseguirà il lavoro:</b></u> Si determina chi eseguirà il lavoro.<br/></li><li><u><b>Pianificare e programmare il lavoro definito:</b></u> Si descrive la sequenza di lavoro e si identificano le interdipendenze delle attività necessarie.<br/></li><li><u><b>Stimare le risorse necessarie e autorizzazione del budget.</b></u><br/></li><li><u><b>Determinare i parametri per convertire PV in EV.</b></u></li><li><u><b>Definire la baseline del progetto, punti di controllo di gestione e autorizzazione dei conti di controllo (CAP).</b></u></li><li><u><b>Registrare i costi diretti del progetto coerentemente con il budget autorizzato.</b></u></li><li><u><b>Monitorare costanetemente prestazioni e determinare eccezioni di costo e pianificazione.</b></u></li></ol></td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="index" style="">8.1</td>
+                    <td class="question">Cosa si intende per base di costo?</td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="answer">Rappresenta l'andamento dei costi cumulati nel tempo, permette di avere un riferimento certo con cui confrontare i reali costi sostenuti facilitando l'individuazione di eventuali scostamenti.<br/>Si presenta come un curva ad S, cambia soltanto in caso di cambio dello scope di progetto.<br/>E' costituita dalla <b>somma dei Control Account Plan (CAP) </b>e si definisce seguendo la procedura:<br/><ul><li>Definizione dello scope.</li><li>Pianificazione del progetto.</li><li>Assegnazione delle risorse.</li></ul></td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="index" style="">9.1</td>
+                    <td class="question">Cosa si intende con Cost Account Plan e Control Account Plan?</td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="answer">Un <b>Cost Account Plan </b>rappresenta il punto più basso della WBS assegnato ad un'organizzazione da un responsabile, essi aumentano a dismisura con l'evolversi dei progetti e della loro complessità.<br/>Oggi invece viene definito come <b>insieme di attività/WP i cui costi possono essere raccolti e confrontati con il budget del lavoro svolto.</b> <br/>Il responsabile di un CAP è il <b>Control Account Manager (CAM) </b>che deve gestire l'impegno relativo al suo CAP, riferire al PM e al direttore funzionale.</td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="index" style="">10.1</td>
+                    <td class="question">Quali sono i metodi di misurazione dell'Earned Value? Quali vengono utilizzati in genere?</td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="answer"><ul><li><b>Formula Fissa: </b>0/100 (tutto alla fine), 50/50, 25/75. Idealmente si utilizza per attività brevi oppure per attività poco importanti oppure dove una misurazione analitica del progresso sarebbe onerosa.</li><li><b>Numeri di unità completate:</b> La percentuale di completamento è data dal rapporto di unità completate sul totale previste. Si applica per lavori ripetitivi con output misurabili e per attività di lunga durata. Richiede una tramissione dei dati tempestiva.<br/></li><li><b>Milestone con valori ponderati: </b>I WP vengono suddivisi in Milestones misurabili e ad ognuna si assegna un "peso" in termini di budget. Il peso viene calcolato come: budget raggiunto a quel punto - budget raggiunto alla milestone precedente. La somma dei pesi delle milestone rappresenta la percentuale di progresso.<br/></li><li><b>Uscita proporzionale all'ingresso:</b> La percentuale di avanzamento è data dalla percentuale di risorse utilizzate rispetto al totale.<br/></li><li><b>Stime complete percentuali:</b> Stime soggettive date dal manager di un WP, quindi sono rischiose e inaffidabili in quanto si può nascondere un ritardo. Un criterio prudenziale è dato dalla definizione di un limite superiore alla percentuale stimata.<br/></li><li><b>Stime percentuali di completamento con tappe utilizzate come "gate":</b> Le tappe intermedie sono poste in una posizione intermedia come "gate" di performance lungo il WIP. Per ogni milestone esiste un valore limite di progresso stimabile fino al raggiungimento di un criterio predefinito.<br/></li><li><b>Relazioni ripartite con altri WIP distinti: </b>Le <i>attività ripartite </i>sono quelle che hanno una relazione diretta e intrinseca alla performance a un altro WIP distinto (<i>attività di base di misurazione</i>).<br/></li><li><b>Level of Effort (LOE): </b>Attività di supporto sensibili al tempo e qui il valore pianificato diventa quello guadagnato (EV=PV) con il passare del tempo, indipendentemente dal lavoro svolto.<br/></li></ul><div>Generalmente i più utilizzati sono:</div><div><ul><li><u><b>Milestone con valori ponderati:</b></u> Dove possiamo identificare traguardi fisici intermedi a cui assegnare un "peso" di budget.<br/></li><li><u><b>Formula fissa 25/75.</b></u><br/></li><li><u><b>Stime complete percentuali.</b></u></li><li><u><b>Stime percentuali con tappe "gate".</b></u></li></ul></div></td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="index" style="">11.1</td>
+                    <td class="question">Cos'è la funzione di controllo errata?</td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="answer">\( BCWS(t)-ACWP(t) = PV(t)-AC(t) \)<br/>Quando si verifica uno scostamento di budget sottraiamo il costo effettivo al valore pianificato.<br/>Si definisce "errata" perché:<br/><ul><li>PV&gt;AC: Indica che abbiamo speso meno del previsto e non sappiamo se tale risparmio sia dovuto all'efficacia o aver lavorato meno di quanto preventivato.</li><li>PV&lt;AC: Indica che abbiamo speso più del budget, il costo extra può essere un'inefficienza oppure abbiamo accelerato troppo delle attività future.</li></ul><div>La criticità principale è che <b>ignora il Lavoro Effettivamente Svolto (EV) </b>senza il quale un manager non può consocere le reali performance delle risorse e se il progetto è effettivamente in anticipo o in ritardo.</div><div>Per ovviare a questo errore si usa la <b>misurazione tridimensionale </b>e si inserisce il EV per calcolare la corretta varianza di costo (CV=EV-AC) e di tempo (SV=EV-PV).</div></td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="index" style="">12.1</td>
+                    <td class="question">Cosa sono gli indici CPI ed SPI?</td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="answer">Il <b>CPI - Indice di Prestazione dei Costi </b>misura l'efficienza economica del lavoro svolto fino al momento del controllo: \( CPI=frac{BCWP(t)}{ACWP(t)}=\frac{EV(t)}{AC(t)} \) e se: CPI&gt;1 stiamo risparmiando sul budget autorizzato, viceversa sforiamo.<br/>Il <b>SPI - Indice di Prestazione della Pianificazione </b>rappresenta quanto valore di lavoro viene generato per ogni euro speso : \( SPI=\frac{BCWP(t)}{ACWP(t)}=\frac{EV(t)}{PV(t)} \) e misura l'efficienza temporale della schedulazione, quindi quanto velocemente stiamo procedendo rispetto ai piani. Se SPI&gt;1 siamo in anticipo, viceversa in ritardo.</td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="index" style="">13.1</td>
+                    <td class="question">Quali sono i limiti di SV e SPI? Quali sono le soluzioni possibili?</td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="answer"><ul><li>I due indici perdono di validità man mano che il progetto si avvia al suo completamento e qui gli indici convergono verso i valori SPI=1 e SV=0.</li><li>Ignorano i ritardi delle singole attività se questi vengono compensati da altri.</li><li>L'SPI deve essere integrato nel CPM per avere una visione veritiera dell'andamento del lavoro.</li></ul><div>Le possibili soluzioni sono:</div><div><ul><li><u><b>Earned Schedule (ES):</b></u> Conversione dei valori di budget in unità di tempo, e rappresenta la durata temporale associata al punto sulla curva del PV in cui il valore pianificato è esattamente uguale all'attuale EV. Da ciò derivano delle nuove metriche:</li><ul><li><b>SV_t - Schedule Variance on Time: </b>Data da EV-AT(Actual Time) e rappresenta il tempo trascorso, se negativo il ritardo è già espresso in mesi o giorni.</li><li><b>SPI_t - Schedule Preference Index on Time: </b>Data da \( \frac{ES}{AT} \), fornisce un indice di efficienza temporale che non decade e indica il ritardo accumulato.<br/></li><li><b>SPI_m - SPI Modificato:</b> Confronto tra velocità di avanzamento reale e pianificata.\( AV=\frac{EV}{T_{now}}, PV=\frac{PV}{T_{now}} \rightarrow SPI_m=\frac{AV}{PV} \)<br/></li></ul></ul></div></td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="index" style="">14.1</td>
+                    <td class="question">Matrice SV - CV</td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="answer">Matrice che incrocia l'efficacia dei costi (asse y) con l'efficacia dei tempi (asse x) e nascono 4 casistiche:<br/><ul><li><u><b>1° Quadrante (CV&gt;0, SV&gt;0):</b></u> Il progetto ha una buona efficienza dei costi e dei tempi (ideale).<br/></li><li><u><b>2° Quadrante (CV&gt;0, SV&lt;0):</b></u> Il progetto ha una buona efficacia dei costi ma non dei tempi.<br/></li><li><u><b>3° Quadrante (CV&lt;0, SV&lt;0):</b></u> Il progetto ha un cattiva efficacia dei costi e dei tempi (caso peggiore).<br/></li><li><b><u>4° Quadrante (CV&lt;0, SV&gt;0):</u> </b>Il progetto ha una cattiva efficacia dei costi ma non dei tempi. Quando si accelerano i valori usando più risorse.<br/></li></ul></td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="index" style="">15.1</td>
+                    <td class="question">Cosa sono BAT e EAC?</td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="answer"><ul><li><b>Budget al Completamento (BAT): </b>Budget totale autorizzato per l'intero progetto, è il punto finale della curva del PV.<br/></li><li><b>Estimate at Completation (EAC):</b> Costo totale previsto del lavoro alla fine del progetto, si calcola come AC+stima dei costi necessari rimanenti. Si prevede tramite tre formule:<br/></li><ol><li><u><b>Stima non realistica:</b></u> Si stima che tutto il lavoro rimanente sia eseguito ai costi di budget originale. EAC=ACWP+(BAC-BCWP).<br/></li><li><u><b>Stima Ottimistica:</b></u> Il CPI raggiunto fino ad ora verrà mantenuto costante per tutto il progetto. \( EAC= ACWP+\frac{(BAC-BCWP)}{CPI} \). Viene considerato come il costo minimo necessario per completare.<br/></li><li><u><b>Stima Pessimistica:</b></u> Si tiene conto anche del SPI e se c'è un ritardo allora si devono aumentare le risorse e quindi i costi al fine di accelerare e recuperare. \( EAC=ACWP=\frac{(BAC-BCWP)}{CPI \cdot SPI} \). E' considerato il limite superiore (costo massimo) stimato.<br/></li></ol></ul></td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    
+    <hr>
+</div>
+</body>
+</html>
