@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Anki PDF Exporter: PM 7 - PMBook (12 cards)</title>
+    <style>
+        body {
+            font-size: 9pt;
+            font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+        }
+        .cards-container {
+            column-count: 1;
+        }
+        .card > table {
+            width: 100%;
+        }
+        .card > table > tr > td {
+            vertical-align: top
+        }
+        td.question, td.answer {
+            word-break: break-all;
+            word-break: break-word;
+            hyphens: auto;
+        }
+        td.index {
+            font-size: 9pt;
+            width: 5%;
+            color: #888888;
+        }
+        td.question {
+            width: 18%;
+            font-weight: normal;
+        }
+        td.spacer {
+            width: 3%;
+        }
+        td.answer {
+            width: 100%;
+        }
+        .card {
+            page-break-inside: avoid;
+            page-break-after: auto;
+        }
+        img {
+            max-width: 35%;
+            max-height: 35vh;
+        }
+        hr {
+            color: #DADADA;
+            border-width: 1px;
+            height: 0px;
+            border-style: solid;
+        }
+        
+/* Cloze deletions */
+.cloze {
+  font-weight: bold;
+  color: blue;
+}
+
+/* Image occlusions */
+#io-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+#io-overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 3
+}
+
+#io-original {
+  position: relative;
+  top: 0;
+  width: 100%;
+  z-index: 2
+}
+
+#io-revl-btn {
+  display: none;
+}
+    </style>
+    <base href="file:///C:/Users/UTENTE/AppData/Roaming/Anki2/Utente%201/collection.media/">
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    function unfixAll() {
+      for (const el of document.getElementsByTagName("*")){
+          var style = window.getComputedStyle(el);
+          if (style.position === "fixed") {
+            if (style.display === "none" || style.visibility === "hidden") return;
+            el.remove();
+          }
+      }
+    }
+    function removeInlineImgStyles(){
+        for(let elm of document.getElementsByTagName("img")){
+            elm.style.width = null;
+            elm.style.height = null;
+      }
+    }
+
+    window.addEventListener("load", unfixAll);
+    window.addEventListener("load", removeInlineImgStyles);
+    </script>
+</head>
+    
+<body>
+<div class="cards-container">
+    
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="index" style="">1.1</td>
+                    <td class="question">Cos'è il PMBook? Come è strutturato?</td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="answer">E' l'acronimo di <b>Project Management Body of Knowledge</b> e rappresenta la guida del PMI che <b>raccoglie concetti, principi e strumenti per la gestione ottimale di progetti.</b> Secondo il PMBook un progetto è un <b>sistema flessibile, elastico e orientato alla creazione di valore.</b><br/>La sua struttura è divisa in due parti:<br/><ul><li><u><b>Standard del Project Management:</b></u> Sistema e contesto generale in cui operano i progetti.<br/></li><li><u><b>Guida del PMBook:</b></u> Come applicare operativamente il Project Management.<br/></li></ul></td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="index" style="">2.1</td>
+                    <td class="question">Quali sono gli elementi fondamentali del PM?</td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="answer"><ul><li><u><b>Come i progetti creano valore e generano un cambiamento organizzativo.</b></u><br/></li><li><u><b>Collegamento tra Governance Organizzativa e Project Governance.</b></u></li><li><u><b>Differenze tra Operation Management e Project Management.</b></u></li><li><u><b>Relazione: portfolio, program, project e operations.</b></u></li></ul></td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="index" style="">3.1</td>
+                    <td class="question">Caratteristiche di un progetto?</td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="answer"><ul><li>Deve essere <b>temporaneo </b>quindi deve avere una data di inizio e una di fine.</li><li>Deve avere un <b>contesto unico</b> quindi obiettivi, risorse, stakeholder e rischi.</li><li>Deve <b>creare valore attraverso cambiamenti organizzativi.</b></li></ul><div>Per il PMBook un progetto è uno <b>strumento di cambiamento organizzativo.</b></div></td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="index" style="">4.1</td>
+                    <td class="question">Cosa si intende per governance e quali tipologie?</td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="answer">Insieme di strutture, ruoli, responsabilità, processi e modelli decisionali che permettono di gestire un progetto (Ex: RACI Matrix).<br/>Può essere:<br/><ul><li><u><b>Organizational Governance:</b></u> Direzione e controllo di tutta l'organizzazione.<br/></li><li><u><b>Project Governance:</b></u> Regole, ruoli e metodi per controllare il progetto.<br/></li></ul></td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="index" style="">5.1</td>
+                    <td class="question">Differenza tra: portfolio, program, project e operation?</td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="answer"><ul><li><u><b>Portfolio:</b></u> Insieme di programmi, progetti e operations gestiti insieme per massimizzare il valore e raggiungere gli obiettivi comuni.<br/></li><li><u><b>Program:</b></u> Insieme di progetti correlati gestiti in modo ordinato.<br/></li><li><u><b>Project</b></u>: Singolo progetto temporaneo per creare un prodotto/servizio o raggiungere un risultato.<br/></li><li><u><b>Operations:</b></u> Attività continuative e ripetitive dell'organizzazione.</li></ul></td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="index" style="">6.1</td>
+                    <td class="question">Differenza tra Project Management e Project Outcome?</td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="answer">La prima si chiede se il progetto è stato gestito bene, la seconda se il progetto ha generato valore</td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="index" style="">7.1</td>
+                    <td class="question">Project Management Principles</td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="answer"><ul><li><u><b>Adottare una visione olistica:</b></u> Guardare il progetto come parte di un sistema più ampio, ci permette di capire che le decisioni su tempi,costi, qualità o scope possono avere effetti su tutto il sistema.Ci fa vedere i collegamenti tra:<br/></li><ul><li>Strategie.</li><li>Stakeholder.</li><li>Risorse.</li><li>Rischi.</li><li>Qualità.</li><li>Operations.</li><li>Valore finale.</li></ul><li><u><b>Focus sul valore:</b></u> Concentrarsi oltre che sul completamento delle attività sulla generazione di valore per l'organizzazione e per gli stakeholders.<br/></li><li><u><b>Costante monitoraggio della qualità.</b></u><br/></li><li><u><b>Essere un leader responsabile.</b></u></li><li><u><b>Integrazione della sostenibilità in ogni area di progetto.</b></u></li><li><u><b>Creare una cultura responsabilizzata.</b></u></li></ul></td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="index" style="">8.1</td>
+                    <td class="question">Quali sono le fasi del Project Life Cycle?</td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="answer"><ol><li><u><b>Project Phase:</b></u> Attività collegate che terminano con un deliverable.<br/></li><ol><li><i>Sequential:</i> Legate dal FS.<br/></li><li><i>Overlapping</i>: Fasi che si sovrappongono.</li><li><i>Iteractive:</i> Fasi che si ripetono.<br/></li></ol><li><u><b>Project Development:</b></u> Modo in cui viene creato ed eseguito il progetto durante il suo ciclo di vita.<br/></li><ol><li><i>Predictive:</i> Requisiti chiari dall'inizio (Waterfall).<br/></li><li><i>Adaptive:</i> Requisiti incerti e si cambia in base ai feedback (Agile).<br/></li><li><i>Hybrid.</i><br/></li></ol><li><u><b>Project Management Focus Area</b></u> <br/></li><ol><li><i>Initiating:</i> Autorizzazione dell'avvio del progetto/fase.<br/></li><li><i>Planning:</i> Definizione di scopo e obiettivi.<br/></li><li><i>Executing:</i> Area in cui si svolge il progetto.<br/></li><li><i>Monitoring and controlling:</i> Tracciamento dell'avanzamento del progetto.<br/></li><li><i>Closing:</i> Chiusura del progetto/fase e verifica che abbia generato il valore atteso.<br/></li></ol></ol></td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="index" style="">9.1</td>
+                    <td class="question">Cosa sono i Performance Domains?</td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="answer">Insieme di processi correlati, essenziali per la consegna di valore al progetto dove le aree lavorano insieme per tutta la durata del progetto.<br/><ul><li><b>Governance:</b> Regole, responsabilità e decisioni di progetto.<br/></li><li><b>Scope:</b> Lavoro richiesto per portare a termine il progetto.<br/></li><li><b>Schedule:</b> Tempi e pianificazione di progetto.<br/></li><li><b>Finance:</b> Costi e budget.<br/></li><li><b>Stakeholders:</b> Relazione con essi.<br/></li><li><b>Resources:</b> Gestione delle risorse.</li><li><b>Risk:</b> Gestione dell'incertezza e delle minacce.<br/></li></ul><div>Ogni PM ha una sua <b>PM Domain Table </b>che collega il <i>Focus </i>con i <i>Performance Domains </i>e serve a mostrare in quale focus area si trovano i processi di ogni dominio.</div></td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="index" style="">10.1</td>
+                    <td class="question">Cos'è il tailoring?</td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="answer">Adozione di attività di PM in base al progetto in questione, in particolare in base al livello di dettaglio, di governance o di controlli.</td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="index" style="">11.1</td>
+                    <td class="question">Cosa sono i Governance Performance Domain e gli obiettivi SMART?</td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="answer">Struttura che si occupa di prendere decisioni, definire le regole, le responsabilità e le strategie da usare per raggiungere l'obiettivo di progetto. Gli scenari possibili sono:<br/><ul><li><u><b>Project Initiation:</b></u> Il progetto è considerato utile e si autorizzano le risorse.<br/></li><li><u><b>Project Replanning:</b></u> Modifica del piano.<br/></li><li><u><b>Project Expansion:</b></u> Ampliamento o riduzione del progetto.<br/></li><li><u><b>Early Termination:</b></u> Chisura anticipata per raggiungimento del valore o impossibilità nel farlo.<br/></li></ul><div>Gli <b>obiettivi SMART</b> sono obiettivi che sono chiari, raggiungibili, misurabili entro un certo periodo di tempo. Si basano su:</div><div><ul><li><u><b>S - Specific.</b></u><br/></li><li><u><b>M - Measurable.</b></u><br/></li><li><u><b>A - Achievable.</b></u><br/></li><li><u><b>R - Realistic.</b></u><br/></li><li><u><b>T - Time-Bound.</b></u><br/></li></ul></div></td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    
+        <div class="card">
+            <table>
+                <tr>
+                    <td class="index" style="">12.1</td>
+                    <td class="question">Qual è il ruolo dell'AI nel PM?</td>
+                    <td class="spacer">&nbsp;</td>
+                    <td class="answer">L'AI descrive una serie di tecnologie che simulano il comportamento umano sui computer.<br/>Consente alle macchina di svolgere attività per cui non sono state addestrate e quindi imparare e adattarsi. Situazioni comuni di utilizzo sono:<br/><ul><li>Monitoraggio in tempo reale dei progressi.</li><li>Svolgimento di report e project status.</li><li>Automazione di task routinari.</li></ul></td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+    
+    <hr>
+</div>
+</body>
+</html>
